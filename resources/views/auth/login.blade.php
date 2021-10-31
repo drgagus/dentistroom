@@ -208,7 +208,7 @@ fieldset{
             </div> <!-- end login -->
                 <div class="logo">
                     <img src="{{asset('storage/images/profile/drg.png')}}" style="width:50%"/>
-                    <p style="font-size:20px ;"><a href="http://www.drgagus.com" target=_blank >drg.agus</a></p>
+                    <p style="font-size:20px ;"><a href="http://drgagus.github.io" target=_blank >drg.agus</a></p>
                 </div> 
         </div>
       </center>

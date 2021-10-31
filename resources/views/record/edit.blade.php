@@ -101,6 +101,8 @@ menu-open
                                         <div class="text text-danger">tanggal lahir harus diisi</div>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="village_id">Alamat</label>
                                     <select class="form-control" id="village_id" name="village_id">
@@ -124,8 +126,20 @@ menu-open
                                         <div class="text text-danger">sekolah harus dipilih</div>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Pasien</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pasien" id="Baru" {{ old('pasien') ?? $record->pasien  === "Baru" ? 'checked':'' }} value="Baru">
+                                        <label class="form-check-label" for="Baru">Baru</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="pasien" id="Lama" {{ old('pasien') ?? $record->pasien  === "Lama" ? 'checked':'' }} value="Lama">
+                                        <label class="form-check-label" for="Lama">Lama</label>
+                                    </div>
+                                        @error('pasien')
+                                        <div class="text text-danger">pasien harus dipilih</div>
+                                        @enderror
+                                </div>
                                 <div class="form-group">
                                     <label for="diag_id">Diagnosa</label>
                                     <select class="form-control" id="diag_id" name="diag_id">
@@ -148,9 +162,11 @@ menu-open
                                         <div class="text text-danger">tindakan harus dipilih</div>
                                     @enderror
                                 </div>
+                            </div>
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="obat">Obat</label>
-                                    <textarea class="form-control" type="text" name="obat" id="obat" rows="5">{{ old('obat') ?? $record->obat}}</textarea>
+                                    <textarea class="form-control" type="text" name="obat" id="obat" rows="3">{{ old('obat') ?? $record->obat}}</textarea>
                                     @error('obat')
                                         <div class="text text-danger">obat harus diisi</div>
                                     @enderror
@@ -167,11 +183,9 @@ menu-open
                                         <div class="text text-danger">foto harus dipilih (jpg,jpeg,png|max:2MB)</div>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label for="catatan">Catatan</label>
-                                    <textarea class="form-control" type="text" name="catatan" id="catatan" rows="5">{{ old('catatan') ?? $record->catatan}}</textarea>
+                                    <textarea class="form-control" type="text" name="catatan" id="catatan" rows="3">{{ old('catatan') ?? $record->catatan}}</textarea>
                                     @error('catatan')
                                         <div class="text text-danger">catatan harus diisi</div>
                                     @enderror
