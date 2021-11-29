@@ -10,7 +10,7 @@ Aplikasi berbasis web yang mendata kunjungan pasien Poli Kesehatan Gigi Dan Mulu
 - Rekapitulasi Kunjungan Per Tahun berdasarkan jenis kelamin, desa, sekolah, diagnosa, dan tindakan
 - Multi User (dentist dan guest)
 
-## Buit With
+## Built With
 
 - [Laravel 8.x](https://laravel.com/)
 - [Bootstrap 4.x](https://getbootstrap.com/)
